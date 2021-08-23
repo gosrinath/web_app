@@ -14,7 +14,7 @@
             {% csrf_token %}
             <div class="row">
               <div class="col-md-6 mb-3">
-                <laxxxbel for="firstName">First name</laxxxbel>
+                <label for="firstName">First name</label>
                 <input type="text" class="form-control" name="firstName" id="firstName" placeholder="" value="" required="">
                 <div class="invalid-feedback">
                   Valid first name is required.
@@ -133,15 +133,9 @@
                 </div>
               </div>
             </div>
-            <hr class="mb-4">
+            <hr class="mb-5">
             <button class="btn btn-primary btn-lg btn-block" type="submit" formmethod="post" name="addtodb">Submit</button>
           </form>
-          <div class="col-md-12 order-md-1">
-            <form method="post">
-              {% csrf_token %}
-              <button class="btn btn-primary btn-lg btn-block" type="submit" formmethod="post" name="showdb">Show Database</button>
-            </form>
-          </div>
         </div>
       </div>
     </div>

@@ -12,6 +12,24 @@
   </head>
 
   <body class="bg-light">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Employee Reference Form</a>
+        </div>
+        <form class="form-inline" method="post">
+          {% csrf_token %}
+          <button class="btn btn-primary" type="submit" formmethod="post" name="backhome">Home</button>
+          &nbsp;&nbsp;&nbsp;
+          <button class="btn btn-success" type="submit" formmethod="post" name="showdb">Show Database</button>
+          &nbsp;&nbsp;&nbsp;
+          <button class="btn btn-danger" type="submit" formmethod="post" name="cleardb">Clear Database</button>
+        </form>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Sign in</a></li>
+        </ul>
+      </div>
+    </nav>
     {% block content %}
 
     {% endblock %}
